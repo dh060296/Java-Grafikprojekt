@@ -10,10 +10,11 @@ public class ChoosingFrame extends JFrame implements ActionListener {
     ChoosingFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
-
+        this.setPreferredSize(new Dimension(1000,800));;
         this.add(btnGerade);
         this.add(btnParabel);
         this.add(btnKurve);
+        this.pack();
         btnGerade.addActionListener(this);
         btnParabel.addActionListener(this);
         btnKurve.addActionListener(this);
@@ -26,6 +27,7 @@ public class ChoosingFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btnGerade){
             this.setVisible(false);
+            Frame myframe=new Frame();
 
         }
     }
