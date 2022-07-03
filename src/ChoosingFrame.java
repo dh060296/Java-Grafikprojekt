@@ -9,7 +9,9 @@ public class ChoosingFrame extends JFrame implements ActionListener {
     public JButton btnKurve = new JButton("Kurve");
     ChoosingFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setPreferredSize(new Dimension(500,300));
         this.setLayout(new GridBagLayout());
+        this.pack();
 
         this.add(btnGerade);
         this.add(btnParabel);
@@ -26,7 +28,8 @@ public class ChoosingFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btnGerade){
             this.setVisible(false);
-
+            Frame frame = new Frame();
+            frame.setTitle("Gerade");
         }
     }
 }
