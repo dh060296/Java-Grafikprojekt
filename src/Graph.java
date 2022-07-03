@@ -22,10 +22,10 @@ public class Graph extends JPanel {
 
         //graphics2D
         graphics2D.setStroke(new BasicStroke(1));
-        for (int i = 60; i < 550; i = i+20){
+        for (int i = 530; i > 60; i = i-20){
             graphics2D.drawLine(i,545,i,555);
         }
-        for (int i = 60; i < 550; i = i+20){
+        for (int i = 530; i> 60; i = i-20){
             graphics2D.drawLine(45,i,55,i);
         }
 
