@@ -1,10 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Graph extends JPanel {
+public class geradeGraph extends JPanel {
     String M;
     String N;
-    Graph(String m, String n){
+    geradeGraph(String m, String n){
         this.setPreferredSize(new Dimension(1000,800));
         M = m;
         N = n;

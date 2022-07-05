@@ -28,8 +28,16 @@ public class ChoosingFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btnGerade){
             this.setVisible(false);
-            Frame frame = new Frame();
-            frame.setTitle("Gerade");
+            geradeFrame geradeFrame = new geradeFrame();
+            geradeFrame.setTitle("Gerade");
+        }
+        if(e.getSource() == btnParabel){
+            this.setVisible(false);
+
+        }
+        if(e.getSource() == btnKurve){
+            this.setVisible(false);
+
         }
     }
 }

@@ -4,6 +4,5 @@ import java.awt.event.ActionListener;
 public class Main {
     public static void main(String[] args) {
         ChoosingFrame cf = new ChoosingFrame();
-        //Frame graph = new Frame();
     }
 }

@@ -1,21 +1,27 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Frame extends JFrame {
-    Graph panel;
+public class geradeFrame extends JFrame implements ActionListener {
+    geradeGraph panel;
+
+    JButton zurueck = new JButton("zurück");
 
     String x;
     String y;
 
-    Frame(){
+    geradeFrame(){
         x = JOptionPane.showInputDialog("geben Sie die Steigung an: ");
         y = JOptionPane.showInputDialog("geben Sie den y-Achsenabschnitt an: ");
-        panel = new Graph(x,y);
+        panel = new geradeGraph(x,y);
         JLabel yAchse = new JLabel("Y");
         yAchse.setBounds(47,30,10,10);
         this.add(yAchse);
         JLabel xAchse = new JLabel("X");
         xAchse.setBounds(553,545,10,10);
         this.add(xAchse);
+
+        this.add(zurueck);
         Integer yas = 500;
         for(int i = 50; i < 540; i = i+20){
             JLabel jl = new JLabel(yas.toString());
@@ -42,5 +48,14 @@ public class Frame extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == zurueck){
+            this.setVisible(false);
+            ChoosingFrame cf = new ChoosingFrame();
+            cf.setVisible(true);
+        }
     }
 }
