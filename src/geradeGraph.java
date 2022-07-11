@@ -53,14 +53,16 @@ public class geradeGraph extends JPanel {
         }
 
 
-
+        //Gerade
         int steigung = Integer.parseInt(M);
         int abschnitt = Integer.parseInt(N);
         //double a  = h-(abschnitt * (h / anzSchritte));
         double a = steigung * (w /anzSchritte);
         double b = steigung * (w / anzSchritte);
+        int k = 250;
+        graphics2D.drawString(String.valueOf(k),w+50,h-20);
         graphics2D.setStroke(new BasicStroke(2));
-        graphics2D.drawLine(0,h + (int)a,w*2,(int)b);
-
+        graphics2D.drawLine(w,h - (abschnitt * (h/anzSchritte)),w*2,h - ((anzSchritte * steigung) * (h/anzSchritte)) - (abschnitt*(h/anzSchritte)));
+        graphics2D.drawLine(w,h - (abschnitt * (h/anzSchritte)),0,h + ((anzSchritte * steigung) * (h/anzSchritte)) - (-abschnitt*(h/anzSchritte)));
     }
 }
